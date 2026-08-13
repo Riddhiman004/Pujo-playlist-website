@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Pujo Playlist</title>
+
+    <link
+        rel="stylesheet"
+        href="web.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         DECORATIVE BACKGROUND
+    ================================== -->
+
+    <div class="background-effects">
+
+        <div class="glow glow-one"></div>
+
+        <div class="glow glow-two"></div>
+
+        <div class="glow glow-three"></div>
+
+    </div>
+
+
+    <!-- =================================
+         FLOATING FLOWERS
+    ================================== -->
+
+    <div class="flowers">
+
+        <span>✿</span>
+        <span>✿</span>
+        <span>✿</span>
+        <span>✿</span>
+        <span>✿</span>
+        <span>✿</span>
+
+    </div>
+
+
+    <!-- =================================
+         HOME
+    ================================== -->
+
+    <section class="hero">
+
+
+        <!-- Decorative alpana -->
+
+        <div class="alpana alpana-left">
+
+            ✧
+
+        </div>
+
+
+        <div class="alpana alpana-right">
+
+            ✧
+
+        </div>
+
+
+        <div class="hero-content">
+
+
+            <!-- Small Bengali heading -->
+
+            <div class="festival-label">
+
+                <span></span>
+
+                <p>
+                    শুভ শারদীয়া
+                </p>
+
+                <span></span>
+
+            </div>
+
+
+            <!-- Main title -->
+
+            <h1>
+
+                PUJO
+
+                <span>
+                    PLAYLIST
+                </span>
+
+            </h1>
+
+
+            <p class="bengali-subtitle">
+
+                পুজোর গান • পুজোর আমেজ • পুজোর গল্প
+
+            </p>
+
+
+            <p class="english-subtitle">
+
+                YOUR PUJO.
+                YOUR VIBE.
+                YOUR PLAYLIST.
+
+            </p>
+
+
+            <!-- =================================
+                 PLAYLIST CARDS
+            ================================== -->
+
+            <div class="playlist-options">
+
+
+                <!-- OLD GOLD -->
+
+                <button
+                    class="playlist-card old-card"
+                    onclick="openPlaylist('oldGold')">
+
+
+                    <div class="card-glow"></div>
+
+
+                    <div class="card-top">
+
+                        <span class="card-symbol">
+                            🪔
+                        </span>
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-content">
+
+                        <p class="card-small">
+                            THE CLASSICS
+                        </p>
+
+                        <h2>
+                            OLD GOLD
+                        </h2>
+
+                        <p class="card-description">
+                            সেই পুরোনো পুজোর
+                            চেনা সুর।
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            OG PUJO VIBES
+                        </span>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                </button>
+
+
+
+                <!-- NEW DANCE -->
+
+                <button
+                    class="playlist-card dance-card"
+                    onclick="openPlaylist('newDance')">
+
+
+                    <div class="card-glow"></div>
+
+
+                    <div class="card-top">
+
+                        <span class="card-symbol">
+                            💃
+                        </span>
+
+                        <span class="card-number">
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-content">
+
+                        <p class="card-small">
+                            THE NEW BEATS
+                        </p>
+
+                        <h2>
+                            NEW DANCE
+                        </h2>
+
+                        <h3>
+                            PUJO
+                        </h3>
+
+                        <p class="card-description">
+                            প্যান্ডেল থেকে
+                            dance floor.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card-footer">
+
+                        <span>
+                            MODERN PUJO
+                        </span>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+
+            <!-- Bottom text -->
+
+            <div class="scroll-hint">
+
+                <span class="scroll-line"></span>
+
+                <p>
+                    CHOOSE YOUR PUJO
+                </p>
+
+                <span class="scroll-line"></span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         PLAYLIST SECTION
+    ================================== -->
+
+    <section
+        id="playlist-section"
+        class="playlist-section">
+
+
+        <button
+            class="back-button"
+            onclick="goHome()">
+
+            <span>←</span>
+
+            BACK TO PUJO
+
+        </button>
+
+
+        <div class="playlist-header">
+
+
+            <p
+                id="playlist-small-title"
+                class="playlist-small-title">
+            </p>
+
+
+            <h2
+                id="playlist-title">
+            </h2>
+
+
+            <p
+                id="playlist-description">
+            </p>
+
+
+        </div>
+
+
+        <!-- Spotify -->
+
+        <div class="spotify-container">
+
+
+            <div
+                class="spotify-top-decoration">
+
+                <span>✦</span>
+
+                <span>✦</span>
+
+                <span>✦</span>
+
+            </div>
+
+
+            <iframe
+                id="spotify-player"
+                src=""
+                width="100%"
+                height="500"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+
+
+            <div
+                id="coming-soon"
+                class="coming-soon"
+                style="display:none;">
+
+                <span>
+                    💃
+                </span>
+
+                <h3>
+                    Coming Soon
+                </h3>
+
+                <p>
+                    Your dance playlist is
+                    getting ready.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="playlist-footer">
+
+            <span>✦</span>
+
+            <p>
+                PUJO PLAYLIST • SHARODIYA
+            </p>
+
+            <span>✦</span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <script src="web.js"></script>
+
+</body>
+
+</html>
